@@ -1,6 +1,6 @@
 /* Keypad
 การต่อขาใน keypad
-ขาในบอร์ด    D0 D1 D2 D3 D4 D5 D6
+ขาในบอร์ด    D2 D3 D4 D5 D6 D7 D8
 ขาใน Keypad 7  6  5  4  3  2  1
 */
 #include <Keypad.h>
@@ -13,8 +13,8 @@ char keys[ROWS][COLS] = {
   {'7','8','9'},
   {'*','0','#'}
 };
-byte rowPins[ROWS] = {D0, D1, D2, D3}; //เชื่อมต่อแถว ขาที่จะส่งค่าไปยัง keypad
-byte colPins[COLS] = {D4, D5, D6}; //เชื่อมต่อหลัก ขาที่จะส่งค่าไปยัง keypad
+byte rowPins[ROWS] = {D2, D3, D4, D5}; //เชื่อมต่อแถว ขาที่จะส่งค่าไปยัง keypad
+byte colPins[COLS] = {D6, D7, D8}; //เชื่อมต่อหลัก ขาที่จะส่งค่าไปยัง keypad
 
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
